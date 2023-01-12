@@ -1,3 +1,6 @@
+
+import streamlit as st
+cidr = st.text_input(label="input")
 import math
 import re
 import streamlit as st
@@ -59,7 +62,7 @@ if octet_used1 != 1:
             for i in range(2):
 
                 octet_B.append(octets2[i])
-            print(octet_B)
+
 
             IP = ".".join(octet_B)
 
@@ -74,7 +77,7 @@ if octet_used1 != 1:
         octet_C = []
         for i in range(3):
             octet_C.append(octets2[i])
-        print(octet_C)
+
 
         IP = ".".join(octet_C)
 
