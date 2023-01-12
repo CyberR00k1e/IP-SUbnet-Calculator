@@ -1,29 +1,11 @@
-'''
 
-10.10.10.22/18
-32-18= 14 (hosts)
-18-8 = 10 (subnets)
-
-255.255.?.*
-
-? above has 2 bits taken for subnet so, 6 bit for hosts 2^6 is 64,
-so 64 onwards is the host
-
-take input
-
-identify class A/B/C
-
-look at the cidr and then find the octet and hosy many host bit
-
-
-'''
 import math
 import re
-cidr = "10.10.10.18/29"
+cidr = "172.28.31.22/26"
 new= cidr.split("/")
 
 class_A= re.search("10.*.*,*",new[0])
-class_B=re.search("172.16.*.*", new[0])
+class_B=re.search("(^172\.1[6-9]\.)|(^172\.2[0-9]\.)|(^172\.3[0-1]\.)", new[0])
 class_C=re.search("192.168.*.*", new[0])
 
 if class_A:
