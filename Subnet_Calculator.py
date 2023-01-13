@@ -5,6 +5,8 @@ import streamlit as st
 #cidr= input("please enter the private CIDR in IP_Address/subnet format: " ).strip()
 def subnet(cidr):
     h=[]
+    j=[]
+    a=0
     new= cidr.split("/")
     octets1=new[0]
     octets2=octets1.split(".")
@@ -98,26 +100,29 @@ def subnet(cidr):
 
         octet_used1=int(octet_used1)
         octets3=[]
+
         for i in range(octet_used1):
             octets3.append(octets2[i])
             #print(octets3)
             network = ".".join(octets3)
         if class_A:
             print(f"Subnet is 0; Network is {network}.0.0.0")
-            i="Subnet is 0; Network is {network}.0.0.0"
+            j.append(f"Subnet is 0; Network is {network}.0.0.0")
         if class_B:
             print(f"Subnet is 0; Network is {network}.0.0")
-            i=f"Subnet is 0; Network is {network}.0.0"
+            j.append(f"Subnet is 0; Network is {network}.0.0")
         if class_C:
             print(f"Subnet is 0; Network is {network}.0")
-            i=f"Subnet is 0; Network is {network}.0"
+            j.append(f"Subnet is 0; Network is {network}.0")
 
             #print(IP)
 
         #print(f"The subnet is 0; the network is {IP}.0.0")
 
 
-    return h,i,a
+    return h,j,a
+
+
 
 
 
