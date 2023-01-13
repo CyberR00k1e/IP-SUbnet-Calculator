@@ -10,7 +10,7 @@ if button:
     output = (sc.subnet(user_input))
 
     output=list(output)
-    st.write(output)
+    #st.write(output)
     hh=f'''
     ****************************************
     The Network Block Size is :red[**{output[2]}**]
