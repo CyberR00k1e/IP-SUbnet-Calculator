@@ -17,7 +17,7 @@ if button:
     '''
 
     st.markdown(hh)
-    st.markdown(":red[The Network Blocks are]")
+    st.markdown(":red[The Network Blocks are below:]")
 
     for i in output[0]:
         st.write(i)
